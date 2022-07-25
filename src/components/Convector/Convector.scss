@@ -1,0 +1,118 @@
+.convector {
+  max-width: 830px;
+  padding: 30px;
+  border-radius: 15px;
+  font-size: 16px;
+  letter-spacing: .25px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: transparent;
+  border: 1px solid #e0e1e5;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    &__blok {
+      font-size: 18px;
+      font-weight: 550;
+      text-align: center;
+      width: 150px;
+      cursor: default;
+      border-radius: 15px;
+      background-color: #f1f2f56e;
+      border: 1px solid #8c8c8e;
+    }
+  }
+
+  &__blok {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__lr {
+      display: grid;
+      grid-template-rows: 2fr 3fr;
+      height: 200px;
+    }
+
+    &__panel {
+      display: flex;
+      justify-content: space-around;
+      margin: auto 0;
+      padding: 15px;
+      font-weight: bold;
+      box-shadow: 0 0 0.5em #c4c4c4;
+      border-radius: 15px;
+      border: 1px solid #c4c4c4;
+
+
+      .valut {
+        cursor: pointer;
+        padding: 5px 10px;
+        border-radius: 15px;
+
+        &:hover {
+          background-color: #e0e1e4;
+          color: rgba(0, 0, 255, 0.582);
+        }
+      }
+    }
+
+    &__info {
+      margin: 20px 0;
+      font-size: 25px;
+      border: none;
+      border-bottom: 2px solid #8c8c8e;
+      border-radius: 5px;
+      background-color: #f1f2f5;
+
+      &:hover {
+        background-color: #cfcfd1;
+      }
+
+      &:focus {
+        outline: none;
+        border: none;
+        background-color: #cfcfd1;
+        border-bottom: 2px solid green;
+      }
+    }
+
+    &__centr {
+      margin: auto;
+      color: green;
+      font-size: 50px;
+    }
+
+    &__centrBootam {
+      display: none;
+      margin: auto;
+      color: green;
+      font-size: 50px;
+    }
+  }
+}
+
+@media (max-width: 775px) {
+  .convector {
+    max-width: 500px;
+
+    &__blok {
+      flex-direction: column;
+
+      &__centr {
+        display: none;
+      }
+
+      &__centrBootam {
+        display: block;
+      }
+    }
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
